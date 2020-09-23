@@ -1,0 +1,16 @@
+Postman Project
+----------------
+
+Table of Contents
+------------------
+
+1) Collections (Folder) ----> contains all the collections produced in the postman during the demo project)
+2) Guide_fromStartToFinish (Folder) -----> Contains Notepad files produced through individual sessions during the project and which roughly describes the
+steps and guidlines that were folowed during the course of the project
+3) TestData (Folder) -----> contains files that were used as dummy files as request inputs as a whole or parts of which were used as inputs to different requests
+4) TestsRuns (Folder) ----> contains results that were recorded after each test runs either positive tests or negative tests
+5) more_users.json --- JSON file -----> just another json file used as an input to a request
+6) Postamn Report.html (A Chrome html file containing an HTML report produced through fake APIs in the local machine)
+
+Please note that the websites used for API testing are there in the public domain and are for demonstration purposes, so some
+requests didn't produce the required results due to some inherent issues in those sites.
