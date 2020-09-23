@@ -1,2 +1,2 @@
-# mobile_auto_test
-Mobile Automation Testing Demo
+# Postman
+Postman API Automation Testing Demo
