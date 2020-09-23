@@ -1,0 +1,44 @@
+{
+  "users": [
+    {
+      "id":1,
+      "name": "gul",
+      "location": "Ireland",
+      "Phone": "1234567890",
+      "courses": [
+        "Java",
+        "Selenium"
+      ]
+     },
+     {
+       "id":2,
+       "name": "waseem",
+       "location": "Clane",
+       "Phone": "3457892098",
+       "courses": [
+        "Python",
+        "Appium"
+      ]
+     },
+     {   
+      "id":3,
+      "name": "sajid",
+      "location": "Enfield",
+      "Phone": "1568368937",
+      "courses": [
+        "C++",
+        "RestAPI"
+      ]
+     },
+     {   
+      "name": "Jerry",
+      "location": "Kinnegad",
+      "Phone": "0443856937",
+      "courses": [
+        "C",
+        "C#"
+      ],
+      "id":4
+     }
+    ]
+}  
