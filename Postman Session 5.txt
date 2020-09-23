@@ -1,0 +1,37 @@
+Postamn session 5
+--------------------------
+How to chain API requests
+Authorizations
+--------------------------
+
+API Request1--------> Response (This response becomes request body for Request2, dynamically)
+
+API Request2--------> Response (This response becomes request body for Request3, dynamically, so on, so forth)
+
+API Request3--------> Response
+
+--------------------------
+Authorizations
+--------------------------
+Basic Auth:
+---------------
+i) Create a request with url: https://postman-echo.com/basic-auth
+ii) Click on Authorization tab
+iii) Select Basic-Auth
+iv) Give postman as username and password as password
+
+API Key:
+---------------
+api.openweathermap.org/data/2.5/forecast/daily?q=Cork&cnt=1
+API Key/appid: fe9c5cddb7e01d747b4611c3fc9eaf2c
+
+Bearer Token/ OAuth 2.0:
+---------------
+i) https://developer.github.com/v3/repos/
+ii) go to your github account
+iii) go to settings
+iv) developer settings
+v) personal access token and generate new token
+vi) copy that token and use it in the authorization tab in Postman
+vii) this token can be used for multiple keys i.e OAuth2.0 Bearer Token etc.
+viii) and click send--> this will create a new repository in your github account.

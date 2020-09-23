@@ -1,0 +1,28 @@
+API Testing with Postman Session-1
+-----------------------------------
+
+1) Download and install Postman from ---> https://www.postman.com/downloads/ --> Download the App
+2) Install the App on your system, through simple installation wizard, just following simple instructions
+3) Launch the App --> Create New Collections, reuests etc. mostly using dropdown menues or tabs
+4) Following are the most used requests for QA purposes
+
+http requests
+--------------------
+GET (Select)
+POST (Create)
+PUT (Update)
+DELETE (Delete)
+-------------------
+
+https://reqres.in/api/users?page=2
+
+https://reqres.in ---> Domain
+
+/api/users -----> Path parameter
+
+?page=2 --------> filter/Query parameter
+
+Put everything together----> https://reqres.in/api/users?page=2 ----> URL (Uniform Resource Locator) ---> its a more generic term
+								----> URI (Uniform Resource Identifier) ---> URI specifically is comprised of all three parameters
+To test APIs we need URIs, not just the URL which can be any be any or all parts of the URI
+

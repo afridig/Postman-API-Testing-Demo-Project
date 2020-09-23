@@ -1,0 +1,25 @@
+Postman Session-2
+----------------------
+The four most important and most used operations in Postman
+
+GET (gets and fetches an entry from the database)
+POST -----> Request body/Request payload (Creates a new entry in the database)
+PUT ------> New Request body/Request payload (Updates an existing entry in the database)
+DELETE (Deletes an existing entry in the database)
+
+Every request will get you a response in JSON format/HTML/XML/Text etc..
+
+PUT------To update the following data with({"name":"test1", "salary":"11233","age":"43"})
+retrieved by---> GET http://dummy.restapiexample.com/api/v1/employee/23
+---------------------------------
+{
+    "status": "success",
+    "data": {
+        "id": 23,
+        "employee_name": "Caesar Vance",
+        "employee_salary": 106450,
+        "employee_age": 21,
+        "profile_image": ""
+    },
+    "message": "Successfully! Record has been fetched."
+}

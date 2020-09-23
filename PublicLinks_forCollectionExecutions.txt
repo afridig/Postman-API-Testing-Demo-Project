@@ -1,0 +1,50 @@
+Public Links for demonstration purposes
+----------------------------------------------------------------------
+
+Collection Name: DataDrivenTesting
+Link: https://www.getpostman.com/collections/e0e367d3b8edddb2a983
+----------------------------------------------------------------------
+
+Collection Name: FakeAPI
+Link: https://www.getpostman.com/collections/b2e86061fde86e70e6eb
+----------------------------------------------------------------------
+
+Collection Name: API Chaining
+Link: https://www.getpostman.com/collections/98b5edc79a4367a04eda
+----------------------------------------------------------------------
+
+Collection Name: Authorizations
+Link: https://www.getpostman.com/collections/2c5bbdd08130fd438e83
+----------------------------------------------------------------------
+
+Collection Name: CountriesAPI_Collection
+Link: https://www.getpostman.com/collections/5d31025f2077def68f09
+----------------------------------------------------------------------
+
+Collection Name: DemoRestAPIs
+Link:https://www.getpostman.com/collections/5aaf51f30af0f5ade58b
+----------------------------------------------------------------------
+
+Collection Name: Employee_APIs
+Link: https://www.getpostman.com/collections/3e3212e4ef1fef6f9019
+----------------------------------------------------------------------
+
+Collection Name: Files_Upload_and_Downloads
+Link: https://www.getpostman.com/collections/b810f6a560016c2db7c4
+----------------------------------------------------------------------
+
+Collection Name: OrderOfExecution
+Link: https://www.getpostman.com/collections/4730684b114832075c91
+----------------------------------------------------------------------
+
+Collection Name: Postman_Scripting
+Link: https://www.getpostman.com/collections/846a8d51a4beebc8ed77
+----------------------------------------------------------------------
+
+Collection Name: Postman Echo
+Link: https://www.getpostman.com/collections/c3a49cd1da2133d3367f
+----------------------------------------------------------------------
+
+Collection Name: RestAPIs
+Link: https://www.getpostman.com/collections/8e8f6ecaea84156705fa
+----------------------------------------------------------------------

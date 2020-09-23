@@ -1,0 +1,41 @@
+Postman Session-7
+-----------------------
+Export & Import collections: APIs used are: http://restcountries.eu
+
+1)Export collections as File & Import as File
+2)Export collection to a folder and import from a folder
+3)Share Collection ---> Get Public Link then import as Link
+Example: https://www.getpostman.com/collections/7d31e2b095f0ba1626ee
+4) Import as RawText--> Curl command --> Import
+
+Documenting and Publishing Collections
+----------------------------------------
+1) Click on the three dots next to the collection
+2) Select Publish Docs from the drop down menu
+3) This will take you to an online site, where you can just follow instructions to fill in appropraitely
+4) Click on publish at the bottom of the document
+5) You will be taken to another screen where it will say your collection is published and get your link for importing and sharing purposes
+
+Run Options
+--------------
+
+1) Within the Postman using Runner window
+2) Run Collection in the Command Prompt/CLI mode
+	- Having exported collection file in json format
+		or
+	- Shared collection link
+pre-reqs-->Node.js-->npm-->npm install newman
+
+1) newman run C:\Users\User\Desktop\Postman Project\Collections\CountriesAPI_Collection.postman_collection.json
+		or
+2) go to the exact location where the file resides, run cmd-->and-->newman run <"file name">
+
+		or
+3) through the shared-->Publick Link
+newman run https://www.getpostman.com/collections/5d31025f2077def68f09
+
+Jenkins (Continuous integration tools) 
+
+
+
+

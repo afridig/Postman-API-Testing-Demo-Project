@@ -1,0 +1,44 @@
+Postman Session 6
+----------------------
+
+
+Pre-Request Script----->Req-----Test Script
+
+Order of execution
+-------------------
+Collection
+	Folder
+		Requests
+
+
+Postman Scripting using JavaScript and Chai BDD
+-------------------------------------------------
+
+File Upload/Download using Rest API
+-------------------------------------
+Demp App: https://github.com/pavanoltraining/spring-boot-file-upload-download-rest-api.git
+
+Pre-requisits: Install Java & Maven on Windows
+
+1) Open Windows Command Prompt and open the Directory where the above mentioned file resides
+2) Run the following commands:
+java -jar target/file-demo-0.0.1-SNAPSHOT.jar
+
+Application URL: http://localhost:8080
+
+Single File Upload
+-------------------------------------
+POST: http://localhost:8080/uploadFile
+
+Multiple File Upload:
+-------------------------------------
+POST: http://localhost:8080/uploadMultipleFiles
+
+
+Download a Single File:
+-------------------------------------
+
+GET:http://localhost:8080/downloadFile/TestFile1.txt
+
+
+

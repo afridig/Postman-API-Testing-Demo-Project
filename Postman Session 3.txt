@@ -1,0 +1,81 @@
+Agenda
+-----------------
+
+Data Driven Testing
+How to run a Collection
+Export/Import Collections
+
+-------------------------------------
+
+Running a single request
+
+Req URL (POST): http://dummy.restapiexample.com/api/v1/create
+
+Request Body/Request Payload:|
+
+ {
+    "name": "gul",
+    "salary": 70000,
+    "age": 40
+  }
+
+-------------------------------------
+Running a Collection
+
+Data Format: csv, json
+
+Request Body:|
+
+{
+	"name":"{{name}}",
+	"salary":"{{salary}}",
+	"age":"{{age}}"
+}
+
+converting from CSV to JSON: https://csvjson.com/csv2json
+
+How to run a single collection (which includes multiple requests):
+
+Go to the ----> Runner option----->Select the collection----->choose iterations and click Run
+
+
+How to run Postamn Collections/Requests from the Command Line.
+--------------------------------------------------------------------------------------------
+
+Pre-requisits
+
+1) Download and Install Node.js (npm)
+	open the command prompt
+		node -v
+		npm -v
+2) Install newman ----> npm install -g newman
+
+3) To generate html report
+	npm install newman-reporter-html
+
+4)Export the collections into the local machine and Run from the Command Prompt
+
+How many ways we can run collections through Command Prompt
+
+Method 1: Executing it and reviewing the results in the command prompt
+-----------
+Syntex: newman run <<exported collection file.json>>
+Example: C:\Users\User\Desktop\Postman Project\Collections>newman run RestAPIs.postman_collection.json
+
+Method 2: Generating html report
+-----------
+Syntex: newman run <<exported collection file.json>>
+Example: C:\Users\User\Desktop\Postman Project\Collections>newman run RestAPIs.postman_collection.json -r html
+
+Method 3: Executing Collections remotely
+-----------
+You have to share your collection and get the URL.
+
+https://www.getpostman.com/collections/5aaf51f30af0f5ade58b
+
+Example: C:\Users\User\Desktop\Postman Project\Collections>newman run https://www.getpostman.com/collections/5aaf51f30af0f5ade58b
+
+If an html report is required, then just add -r html to the above command at the end.
+
+
+

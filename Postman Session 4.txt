@@ -1,0 +1,54 @@
+Session 4
+------------
+How to create own APIs (Fake APIs)
+------------
+1) Install NodeJS
+	Download link: https://nodejs.org/en/download/
+	Check if its installed or not, run cmd-----> nodejs --version
+	if its hows the version number we are ready to go
+
+2) Make sure npm is installed by running in cmd----->npm --version
+
+3) Install json.server to act as our local server for our fake APIs
+	npm install -g json-server
+
+4) create info.json file with sample data(json format)
+	loc: C:\Users\User\info.json
+
+5) Run the following command to make your APIs up and running
+	json-server info.json
+
+
+Postman Variables
+---------------------
+Postman Variables
+-------------------
+1) Collection Variables
+
+i)click on the three dots next to the collection name
+ii) click on edit
+iii)click on variables
+iv) give variable name
+v) give variable value
+
+OR
+
+i)click on the three dots next to the collection name
+ii) click on edit
+iii)click on pre-request scripts
+iv) postman.setGlobalVariable("URL","<value>")
+
+2) Environment Variables/Global Variables
+
+i) go to postman setting at the very top right corner with gear icon or an icon next to the the eye icon
+...says manage environments----> click
+...gives a window where click on add
+...give an environment value like---> QA, DEV etc..
+...set variable name and its value as you would in setting the collection variables
+
+--------------------------------------------------
+Workflow
+----------------
+postman.setNextRequest("Request Name");
+postman.setNextRequest("null")---> last in the request sequence
+ 
