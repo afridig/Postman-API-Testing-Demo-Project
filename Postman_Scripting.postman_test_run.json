@@ -1,0 +1,176 @@
+{
+	"id": "4be995e8-10c7-4c18-85c6-12a93ad34119",
+	"name": "Postman_Scripting",
+	"timestamp": "2020-09-23T10:05:09.154Z",
+	"collection_id": "d8b00346-3e6f-4540-a82c-be7a2c585970",
+	"folder_id": 0,
+	"environment_id": "ebffae95-34da-49f3-bbe2-b4f9ceea7960",
+	"totalPass": 18,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "5f8ee02a-02c1-49f2-8e62-156d6b8377ba",
+			"name": "https://reqres.in/api/users/2",
+			"url": "https://reqres.in/api/users/2",
+			"time": 59,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate multiple fields in the response body": true,
+				"Body contains string": true,
+				"Successful status code": true,
+				"Content-Type Header present": true,
+				"Content-Type value": true,
+				"Cookies is present": true,
+				"Cookie value check": true,
+				"Response time less than 80 ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate multiple fields in the response body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type Header present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookies is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookie value check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time less than 80 ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				59
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate multiple fields in the response body": true,
+					"Body contains string": true,
+					"Successful status code": true,
+					"Content-Type Header present": true,
+					"Content-Type value": true,
+					"Cookies is present": true,
+					"Cookie value check": true,
+					"Response time less than 80 ms": true
+				}
+			]
+		},
+		{
+			"id": "8402e46a-0ab8-46d7-9bb3-24e253ef774e",
+			"name": "Testing pre-request and post request scripting",
+			"url": "https://reqres.in/api/users/2",
+			"time": 42,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Validate multiple fields in the response body": true,
+				"Body contains string": true,
+				"Successful status code": true,
+				"Content-Type Header present": true,
+				"Content-Type value": true,
+				"Cookies is present": true,
+				"Cookie value check": true,
+				"Response time less than 80 ms": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validate multiple fields in the response body": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Body contains string": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Successful status code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type Header present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Content-Type value": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookies is present": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Cookie value check": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Response time less than 80 ms": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				42
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Validate multiple fields in the response body": true,
+					"Body contains string": true,
+					"Successful status code": true,
+					"Content-Type Header present": true,
+					"Content-Type value": true,
+					"Cookies is present": true,
+					"Cookie value check": true,
+					"Response time less than 80 ms": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 101,
+	"collection": {
+		"requests": [
+			{
+				"id": "5f8ee02a-02c1-49f2-8e62-156d6b8377ba",
+				"method": "GET"
+			},
+			{
+				"id": "8402e46a-0ab8-46d7-9bb3-24e253ef774e",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,62 @@
+{
+	"id": "b9c5f2c7-b879-4419-9aa7-dd5663674fb8",
+	"name": "CountriesAPI_Collection",
+	"timestamp": "2020-09-23T06:40:26.672Z",
+	"collection_id": "68e28c26-105a-41fb-8a70-e6cab1c7e518",
+	"folder_id": 0,
+	"environment_id": "ebffae95-34da-49f3-bbe2-b4f9ceea7960",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "2f7403f0-adbf-48b9-8682-b83ca9548885",
+			"name": "RestCountriesName",
+			"url": "https://restcountries.eu/rest/v2/name/Ireland",
+			"time": 150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				150
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "9b96de7e-bb51-48a3-a19c-5f774fca0136",
+			"name": "RestCountries_CapitalCity",
+			"url": "https://restcountries.eu/rest/v2/capital/Islamabad",
+			"time": 150,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				150
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 300,
+	"collection": {
+		"requests": [
+			{
+				"id": "2f7403f0-adbf-48b9-8682-b83ca9548885",
+				"method": "GET"
+			},
+			{
+				"id": "9b96de7e-bb51-48a3-a19c-5f774fca0136",
+				"method": "GET"
+			}
+		]
+	}
+}

@@ -1,0 +1,79 @@
+{
+	"id": "76cef6f4-d5a6-47e4-927e-2b6665592104",
+	"name": "DataDrivenTesting",
+	"timestamp": "2020-09-20T10:47:42.018Z",
+	"collection_id": "e00f3d50-b39b-47ea-862d-6fd4b2b8bbfa",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 7,
+	"totalFail": 3,
+	"results": [
+		{
+			"id": "9c2583c1-51f8-4fc8-98af-1e2383397c59",
+			"name": "CREATE multiple employee record",
+			"time": 758,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Validating Status Code": false,
+				"Validating Status anywhere in the response body": true
+			},
+			"testPassFailCounts": {
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 3
+				},
+				"Validating Status anywhere in the response body": {
+					"pass": 4,
+					"fail": 0
+				},
+				"Check Content-Type header": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status in the exact position": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				1027,
+				773,
+				838,
+				758
+			],
+			"allTests": [
+				{
+					"Validating Status Code": false,
+					"Validating Status anywhere in the response body": true
+				},
+				{
+					"Validating Status Code": false,
+					"Validating Status anywhere in the response body": true
+				},
+				{
+					"Check Content-Type header": true,
+					"Validating Status Code": true,
+					"Validating Status anywhere in the response body": true,
+					"Validating Status in the exact position": true
+				},
+				{
+					"Validating Status Code": false,
+					"Validating Status anywhere in the response body": true
+				}
+			]
+		}
+	],
+	"count": 4,
+	"totalTime": 3396,
+	"collection": {
+		"requests": [
+			{
+				"id": "9c2583c1-51f8-4fc8-98af-1e2383397c59",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,106 @@
+{
+	"id": "df2d0549-f5cc-4b6c-9f0c-46061b720e0d",
+	"name": "Authorizations",
+	"timestamp": "2020-09-23T10:01:02.352Z",
+	"collection_id": "d6568f9e-b933-4261-a7f0-a5f8b9fd4719",
+	"folder_id": 0,
+	"environment_id": "ebffae95-34da-49f3-bbe2-b4f9ceea7960",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "f6d19259-94c7-4677-b4a3-47ce5f81625b",
+			"name": "Basic-Auth",
+			"url": "http://postman-echo.com/basic-auth",
+			"time": 301,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				301
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "c1c70aba-b563-4bb4-9114-06d94dafddc7",
+			"name": "API Key-Auth",
+			"url": "http://api.openweathermap.org/data/2.5/forecast/daily?q=Cork&cnt=1&appid=fe9c5cddb7e01d747b4611c3fc9eaf2c",
+			"time": 183,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				183
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "687f465f-0117-427a-8b6e-4a1105660cc6",
+			"name": "BearerToken_Auth",
+			"url": "https://api.github.com/user/repos",
+			"time": 343,
+			"responseCode": {
+				"code": 401,
+				"name": "Unauthorized"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				343
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "4bf39ea7-db39-45e8-b01e-334e463c0e09",
+			"name": "OAuth2.0",
+			"url": "https://api.github.com/user/repos",
+			"time": 447,
+			"responseCode": {
+				"code": 422,
+				"name": "Unprocessable Entity"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				447
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1274,
+	"collection": {
+		"requests": [
+			{
+				"id": "f6d19259-94c7-4677-b4a3-47ce5f81625b",
+				"method": "GET"
+			},
+			{
+				"id": "c1c70aba-b563-4bb4-9114-06d94dafddc7",
+				"method": "GET"
+			},
+			{
+				"id": "687f465f-0117-427a-8b6e-4a1105660cc6",
+				"method": "POST"
+			},
+			{
+				"id": "4bf39ea7-db39-45e8-b01e-334e463c0e09",
+				"method": "POST"
+			}
+		]
+	}
+}

@@ -1,0 +1,129 @@
+{
+	"id": "673b54cd-2512-4915-9681-b7cbebdefd2e",
+	"name": "Files_Upload_and_Downloads",
+	"timestamp": "2020-09-23T10:03:45.223Z",
+	"collection_id": "46d9e133-bf39-498b-9eb7-7519103ed221",
+	"folder_id": 0,
+	"environment_id": "ebffae95-34da-49f3-bbe2-b4f9ceea7960",
+	"totalPass": 2,
+	"totalFail": 7,
+	"results": [
+		{
+			"id": "4506ac35-6d06-4103-b9f4-dd92ab79758b",
+			"name": "Single file upload",
+			"url": "http://localhost:8080/uploadFile",
+			"time": 57,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"verify response": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"verify response": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				57
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"verify response": false
+				}
+			]
+		},
+		{
+			"id": "99bde8b3-837e-42ac-a8f1-ff46ef2e8402",
+			"name": "MultipleFilesUpload",
+			"url": "http://localhost:8080/uploadMultipleFiles",
+			"time": 19,
+			"responseCode": {
+				"code": 500,
+				"name": "Internal Server Error"
+			},
+			"tests": {
+				"Status code is 200": false,
+				"verify response": false
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 0,
+					"fail": 1
+				},
+				"verify response": {
+					"pass": 0,
+					"fail": 1
+				}
+			},
+			"times": [
+				19
+			],
+			"allTests": [
+				{
+					"Status code is 200": false,
+					"verify response": false
+				}
+			]
+		},
+		{
+			"id": "977067fa-4c03-496c-88d3-31a71f4fa15e",
+			"name": "Single file download",
+			"url": "http://localhost:8080/downloadFile/TestFile1.txt",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Status code is 200": true,
+				"Verify the text value in response": true
+			},
+			"testPassFailCounts": {
+				"Status code is 200": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verify the text value in response": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"Status code is 200": true,
+					"Verify the text value in response": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 85,
+	"collection": {
+		"requests": [
+			{
+				"id": "4506ac35-6d06-4103-b9f4-dd92ab79758b",
+				"method": "POST"
+			},
+			{
+				"id": "99bde8b3-837e-42ac-a8f1-ff46ef2e8402",
+				"method": "POST"
+			},
+			{
+				"id": "977067fa-4c03-496c-88d3-31a71f4fa15e",
+				"method": "GET"
+			}
+		]
+	}
+}

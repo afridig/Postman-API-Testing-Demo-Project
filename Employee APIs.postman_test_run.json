@@ -1,0 +1,55 @@
+{
+	"id": "853b39cb-1001-4f83-8f98-f89cc40a6dc7",
+	"name": "Employee APIs",
+	"timestamp": "2020-09-20T10:51:08.864Z",
+	"collection_id": "16d6c8e6-011f-4ef8-98e7-a30e07c6df12",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 1,
+	"totalFail": 1,
+	"results": [
+		{
+			"id": "53b75099-32f6-4373-85e3-d175c316987e",
+			"name": "request all employees' data",
+			"url": "http://dummy.restapiexample.com/api/v1/employees",
+			"time": 879,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {
+				"Validating Status Code": false,
+				"Validating response body": true
+			},
+			"testPassFailCounts": {
+				"Validating Status Code": {
+					"pass": 0,
+					"fail": 1
+				},
+				"Validating response body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				879
+			],
+			"allTests": [
+				{
+					"Validating Status Code": false,
+					"Validating response body": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 879,
+	"collection": {
+		"requests": [
+			{
+				"id": "53b75099-32f6-4373-85e3-d175c316987e",
+				"method": "GET"
+			}
+		]
+	}
+}

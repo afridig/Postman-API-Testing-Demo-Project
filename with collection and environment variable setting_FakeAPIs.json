@@ -1,0 +1,227 @@
+{
+	"id": "a87ae65c-a047-4340-b611-f835d8384f01",
+	"name": "FakeAPI",
+	"timestamp": "2020-09-21T09:49:32.178Z",
+	"collection_id": "a5f8f3b1-faff-49cd-9539-c7b1a0f82512",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 14,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "07d8f775-e8d4-4cab-b9b1-1dd58606b8d9",
+			"name": "Gets all users",
+			"url": "http://localhost:3000/users",
+			"time": 526,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Verifying the name record": true,
+				"Verifying the user location record": true,
+				"Validating Status Code": true
+			},
+			"testPassFailCounts": {
+				"Verifying the name record": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Verifying the user location record": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				526
+			],
+			"allTests": [
+				{
+					"Verifying the name record": true,
+					"Verifying the user location record": true,
+					"Validating Status Code": true
+				}
+			]
+		},
+		{
+			"id": "9d0a8ff2-0fbd-47bd-9538-65f162dcafc3",
+			"name": "Gets a specif user details",
+			"url": "http://localhost:3000/users/1",
+			"time": 11,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"name": true,
+				"location": true,
+				"Validating Status Code": true
+			},
+			"testPassFailCounts": {
+				"name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				11
+			],
+			"allTests": [
+				{
+					"name": true,
+					"location": true,
+					"Validating Status Code": true
+				}
+			]
+		},
+		{
+			"id": "20fb8eac-722e-40ef-9d47-3e2c42cc2c3d",
+			"name": "Creating a single data entry",
+			"url": "http://localhost:3000/users",
+			"time": 17,
+			"responseCode": {
+				"code": 201,
+				"name": "Created"
+			},
+			"tests": {
+				"name": true,
+				"location": true,
+				"Validating Status Code": true
+			},
+			"testPassFailCounts": {
+				"name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				17
+			],
+			"allTests": [
+				{
+					"name": true,
+					"location": true,
+					"Validating Status Code": true
+				}
+			]
+		},
+		{
+			"id": "ede22df6-f446-4e6d-ae45-ef50f82bda68",
+			"name": "Updating an entry in the records",
+			"url": "http://localhost:3000/users/7",
+			"time": 9,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"name": true,
+				"location": true,
+				"Validating Status Code": true
+			},
+			"testPassFailCounts": {
+				"name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"location": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				9
+			],
+			"allTests": [
+				{
+					"name": true,
+					"location": true,
+					"Validating Status Code": true
+				}
+			]
+		},
+		{
+			"id": "3c6b6b81-6319-498a-bb0e-d4f55f328ebf",
+			"name": "Deleting an entry from the records",
+			"url": "http://localhost:3000/users/7",
+			"time": 10,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"Validating Status Code": true,
+				"Validating response body": true
+			},
+			"testPassFailCounts": {
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating response body": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				10
+			],
+			"allTests": [
+				{
+					"Validating Status Code": true,
+					"Validating response body": true
+				}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 573,
+	"collection": {
+		"requests": [
+			{
+				"id": "07d8f775-e8d4-4cab-b9b1-1dd58606b8d9",
+				"method": "GET"
+			},
+			{
+				"id": "9d0a8ff2-0fbd-47bd-9538-65f162dcafc3",
+				"method": "GET"
+			},
+			{
+				"id": "20fb8eac-722e-40ef-9d47-3e2c42cc2c3d",
+				"method": "POST"
+			},
+			{
+				"id": "ede22df6-f446-4e6d-ae45-ef50f82bda68",
+				"method": "PUT"
+			},
+			{
+				"id": "3c6b6b81-6319-498a-bb0e-d4f55f328ebf",
+				"method": "DELETE"
+			}
+		]
+	}
+}

@@ -1,0 +1,83 @@
+{
+	"id": "8d91f16c-4bb2-4397-a101-93b19f261fca",
+	"name": "RestAPIs",
+	"timestamp": "2020-09-23T13:22:36.719Z",
+	"collection_id": "8b976217-edca-4962-b0dd-069b8fca1075",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 3,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "19bfb9ba-b598-4781-bf2c-3597d62c7a42",
+			"name": "Creating a new record",
+			"url": "http://dummy.restapiexample.com/api/v1/create",
+			"time": 854,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {
+				"name": true,
+				"salary": true,
+				"Validating Status Code": true
+			},
+			"testPassFailCounts": {
+				"name": {
+					"pass": 1,
+					"fail": 0
+				},
+				"salary": {
+					"pass": 1,
+					"fail": 0
+				},
+				"Validating Status Code": {
+					"pass": 1,
+					"fail": 0
+				}
+			},
+			"times": [
+				854
+			],
+			"allTests": [
+				{
+					"name": true,
+					"salary": true,
+					"Validating Status Code": true
+				}
+			]
+		},
+		{
+			"id": "ba3fe359-ffaa-48f2-8143-8c47f0392b8a",
+			"name": "Updating an entry in the records",
+			"url": "http://dummy.restapiexample.com/api/v1/update/21",
+			"time": 888,
+			"responseCode": {
+				"code": 429,
+				"name": "Too Many Requests"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				888
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 1742,
+	"collection": {
+		"requests": [
+			{
+				"id": "19bfb9ba-b598-4781-bf2c-3597d62c7a42",
+				"method": "POST"
+			},
+			{
+				"id": "ba3fe359-ffaa-48f2-8143-8c47f0392b8a",
+				"method": "PUT"
+			}
+		]
+	}
+}

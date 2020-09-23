@@ -1,0 +1,62 @@
+{
+	"id": "c6db7d5e-15bc-46b2-968c-97e0aac6ad03",
+	"name": "API Chaining",
+	"timestamp": "2020-09-23T09:59:48.178Z",
+	"collection_id": "75785665-d579-48c4-9009-6d852f6e2f80",
+	"folder_id": 0,
+	"environment_id": "ebffae95-34da-49f3-bbe2-b4f9ceea7960",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "1b1bbb36-7caf-4130-b1f6-8e1f46037e61",
+			"name": "ListUsers",
+			"url": "http://reqres.in/api/users?page=2",
+			"time": 166,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				166
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "def1b7a3-2901-4277-b4bd-b8b05e3913b7",
+			"name": "UpdateEntry",
+			"url": "http://reqres.in/api/users/2",
+			"time": 35,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				35
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 201,
+	"collection": {
+		"requests": [
+			{
+				"id": "1b1bbb36-7caf-4130-b1f6-8e1f46037e61",
+				"method": "GET"
+			},
+			{
+				"id": "def1b7a3-2901-4277-b4bd-b8b05e3913b7",
+				"method": "PUT"
+			}
+		]
+	}
+}

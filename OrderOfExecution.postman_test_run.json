@@ -1,0 +1,40 @@
+{
+	"id": "3c6cecb7-cf71-47cf-b40f-3e55d6d2fd7f",
+	"name": "OrderOfExecution",
+	"timestamp": "2020-09-23T10:04:35.013Z",
+	"collection_id": "cefbad30-b309-4bf5-babf-3c63212fb72f",
+	"folder_id": 0,
+	"environment_id": "ebffae95-34da-49f3-bbe2-b4f9ceea7960",
+	"totalPass": 0,
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "47efa8e0-2dea-4494-b226-e30e451f1817",
+			"name": "GetSingleUser",
+			"url": "https://reqres.in/api/users/2",
+			"time": 61,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				61
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 61,
+	"collection": {
+		"requests": [
+			{
+				"id": "47efa8e0-2dea-4494-b226-e30e451f1817",
+				"method": "GET"
+			}
+		]
+	}
+}
