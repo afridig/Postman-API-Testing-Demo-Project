@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "d6ddbe40-5dbe-45cb-b03f-00cbafb51198",
+		"name": "DemoRestAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Page2UserData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "56354ecd-5e0c-42da-9f83-6208bdb57a47",
+						"exec": [
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;\r",
+							"tests[\"Validating response body\"]= responseBody.has(\"data\");\r",
+							"\r",
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"page no\"] = response.page == 2;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://reqres.in/api/users?page=2",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single user GET request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "344683dc-7d37-47ba-ac35-d9696b1af379",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"Verify First Name\"] = response.data.first_name == \"Janet\";\r",
+							"tests[\"Verify Last Name\"] = response.data.last_name == \"Weaver\";"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://reqres.in/api/users/2",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "single user CREATE request",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5ad359e7-48eb-4eb7-bd3b-78afd4aca090",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"name\"] = response.name == \"morpheus\";\r",
+							"tests[\"job\"] = response.job == \"leader\";\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"morpheus\",\r\n    \"job\": \"leader\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://reqres.in/api/users",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST request success",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "50213cc2-014d-48e2-a7ac-c1863824f311",
+						"exec": [
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"eve.holt@reqres.in\",\r\n    \"password\": \"cityslicka\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://reqres.in/api/login",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST request failure",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "5602a84d-4a23-4521-a163-f961ec0cd3dd",
+						"exec": [
+							"tests[\"Validating Status Code\"]=responseCode.code== 400;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"peter@klaven\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://reqres.in/api/login",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

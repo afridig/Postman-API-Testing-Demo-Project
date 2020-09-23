@@ -1,0 +1,146 @@
+{
+	"info": {
+		"_postman_id": "8b976217-edca-4962-b0dd-069b8fca1075",
+		"name": "RestAPIs",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Creating a new record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9af350c6-fb94-4916-ac86-c191bc147040",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"name\"] = response.data.name == \"test\";\r",
+							"tests[\"salary\"] = response.data.salary == \"123\";\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"test\",\"salary\":\"123\",\"age\":\"23\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/create",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating an entry in the records",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c9a88f2c-39d9-420a-b1b9-576a9e472fed",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"name\"] = response.data.name == \"test1\";\r",
+							"tests[\"salary\"] = response.data.salary == \"1123\";\r",
+							"tests[\"age\"] = response.data.age == \"23\"\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"name\":\"test1\",\"salary\":\"1123\",\"age\":\"23\"}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/update/21",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"update",
+						"21"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting an entry from the records",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "1e3dac9d-d4fb-4a22-a18e-c670fb2f3a06",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"status\"] = response.status == \"success\";\r",
+							"tests[\"data\"] = response.data == \"700\";\r",
+							"tests[\"message\"] = response.message == \"Successfully! Record has been deleted\"\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/delete/700",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"delete",
+						"700"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

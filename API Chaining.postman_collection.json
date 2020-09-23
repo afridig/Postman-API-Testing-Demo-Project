@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "75785665-d579-48c4-9009-6d852f6e2f80",
+		"name": "API Chaining",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "ListUsers",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "47c9527f-b15a-487f-9ac4-d3a66f04cc37",
+						"exec": [
+							"jsonData = JSON.parse(responseBody)\r",
+							"value = jsonData.data[0].first_name\r",
+							"pm.globals.set(\"username\", value);"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://reqres.in/api/users?page=2",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateEntry",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "c8db3bc3-c0e5-4f3b-902c-8f799c0c2512",
+						"exec": [
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"{{username}}\",\r\n    \"job\": \"zion resident\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://reqres.in/api/users/2",
+					"protocol": "http",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "add179a5-d9cc-4b47-bb81-469be95db77e",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "eaeca9c2-a078-43f5-a1d0-9b5375611a42",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "6e9c0d34-896c-4a89-a19e-d92cd105fb1a",
+			"key": "username",
+			"value": "xyz"
+		}
+	],
+	"protocolProfileBehavior": {}
+}

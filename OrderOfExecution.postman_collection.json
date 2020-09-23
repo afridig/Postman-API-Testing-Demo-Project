@@ -1,0 +1,103 @@
+{
+	"info": {
+		"_postman_id": "cefbad30-b309-4bf5-babf-3c63212fb72f",
+		"name": "OrderOfExecution",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "MyFolder",
+			"item": [
+				{
+					"name": "GetSingleUser",
+					"event": [
+						{
+							"listen": "prerequest",
+							"script": {
+								"id": "fd9c1d2c-6343-41c8-b386-c98db15d26f9",
+								"exec": [
+									"console.log(\"This is Request level pre-request Script......\");"
+								],
+								"type": "text/javascript"
+							}
+						},
+						{
+							"listen": "test",
+							"script": {
+								"id": "881ae103-4815-4761-95fe-ce37de3c1255",
+								"exec": [
+									"console.log(\"This is Request level Tests Script......\");"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://reqres.in/api/users/2",
+							"protocol": "https",
+							"host": [
+								"reqres",
+								"in"
+							],
+							"path": [
+								"api",
+								"users",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "ba899ef0-c836-466b-a354-2391d3201a69",
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"This is Folder level pre-request Script......\");"
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "5e80fdd0-9ab8-4a58-abe6-8fde87b9faa0",
+						"type": "text/javascript",
+						"exec": [
+							"console.log(\"This is Folder level Tests Script......\");"
+						]
+					}
+				}
+			],
+			"protocolProfileBehavior": {}
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "dcbd8400-c569-43db-a7a6-46b364ebd244",
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"This is Collection level pre-request Script......\");"
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "de5884dd-0a87-4cb8-a33b-d32d794656df",
+				"type": "text/javascript",
+				"exec": [
+					"console.log(\"This is Collection level Tests Script......\");"
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}

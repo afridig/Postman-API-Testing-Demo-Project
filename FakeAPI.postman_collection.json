@@ -1,0 +1,207 @@
+{
+	"info": {
+		"_postman_id": "a5f8f3b1-faff-49cd-9539-c7b1a0f82512",
+		"name": "FakeAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Gets all users",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d7f2b16d-1764-40c8-9ed1-023d3e57b507",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"\r",
+							"tests[\"Verifying the name record\"] = responseBody.has(\"waseem\");\r",
+							"tests[\"Verifying the user location record\"] = responseBody.has(\"Clane\");\r",
+							"//tests[\"name\"] = response.name == \"gul\";//doesn't work\r",
+							"//tests[\"location\"] = response.location == \"Ireland\";//doesn't work\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Gets a specif user details",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "55b62686-0e2b-4764-b1c5-c368d9a4784f",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"name\"] = response.name == \"gul\";\r",
+							"tests[\"location\"] = response.location == \"Ireland\";\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Creating a single data entry",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "66181b4c-87a4-4a71-a603-dabb2551b355",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"name\"] = response.name == \"Jerry\";\r",
+							"tests[\"location\"] = response.location == \"Trim\";\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 201;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n      \"name\": \"Jerry\",\r\n      \"location\": \"Trim\",\r\n      \"Phone\": \"1563856937\",\r\n      \"courses\": [\r\n        \"C\",\r\n        \"C#\"\r\n      ]\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Updating an entry in the records",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "87a9a4e9-099d-4b17-b3de-ccaac65d4b7c",
+						"exec": [
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"name\"] = response.name == \"Jerry\";\r",
+							"tests[\"location\"] = response.location == \"Kinnegad\";\r",
+							"\r",
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{   \r\n      \"name\": \"Jerry\",\r\n      \"location\": \"Kinnegad\",\r\n      \"Phone\": \"0443856937\",\r\n      \"courses\": [\r\n        \"C\",\r\n        \"C#\"\r\n      ]\r\n     }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/users/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"7"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Deleting an entry from the records",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "d61703de-1468-4d3b-8be4-cf5a99ea57b7",
+						"exec": [
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;\r",
+							"\r",
+							"tests[\"Validating response body\"]= responseBody.has(\"{}\");"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/users/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

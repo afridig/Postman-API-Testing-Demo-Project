@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "46d9e133-bf39-498b-9eb7-7519103ed221",
+		"name": "Files Upload and Downloads",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Single file upload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "e7328e13-2eb6-4cc0-b091-f472f1f8c7ab",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify response\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson.fileName).to.eql(\"TestFile1.txt\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/User/Desktop/TestFile1.txt"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploadFile",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"uploadFile"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "MultipleFilesUpload",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "8e6ded5a-602e-4731-a929-896fb7ef484b",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify response\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson[0].fileName).to.eql(\"TestFile1.txt\");\r",
+							"    pm.expect(responseJson[1].fileName).to.eql(\"TestFile2.txt\");\r",
+							"    pm.expect(responseJson[2].fileName).to.eql(\"TestFile3.txt\");\r",
+							"    pm.expect(responseJson[3].fileName).to.eql(\"TestFile4.txt\");\r",
+							"});\r",
+							"\r",
+							"//OR choosing the longer way and writing a function to validate every single file\r",
+							"\r",
+							"pm.test(\"verify response\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson[1].fileName).to.eql(\"TestFile2.txt\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify response\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson[2].fileName).to.eql(\"TestFile3.txt\");\r",
+							"});\r",
+							"\r",
+							"pm.test(\"verify response\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson[3].fileName).to.eql(\"TestFile4.txt\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "files",
+							"type": "file",
+							"src": [
+								"/C:/Users/User/Desktop/TestingRestAPIs/TestFile1.txt",
+								"/C:/Users/User/Desktop/TestingRestAPIs/TestFile2.txt",
+								"/C:/Users/User/Desktop/TestingRestAPIs/TestFile3.txt",
+								"/C:/Users/User/Desktop/TestingRestAPIs/TestFile4.txt"
+							]
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/uploadMultipleFiles",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"uploadMultipleFiles"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Single file download",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "9414d068-75fa-4641-a289-56ef9affe257",
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"Verify the text value in response\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"fake APIs\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/downloadFile/TestFile1.txt",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"downloadFile",
+						"TestFile1.txt"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

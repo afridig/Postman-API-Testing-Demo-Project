@@ -1,0 +1,190 @@
+{
+	"info": {
+		"_postman_id": "d8b00346-3e6f-4540-a82c-be7a2c585970",
+		"name": "Postman Scripting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://reqres.in/api/users/2",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "78b9c814-11d9-4a04-8358-6e4d1ec49fe4",
+						"exec": [
+							"pm.globals.set(\"userid\", 2);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "45f3c631-0fcf-4332-ba8e-c91a615dbf83",
+						"exec": [
+							"//Status code validation\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Multiple assertions\r",
+							"pm.test(\"Validate multiple fields in the response body\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson.data.id).to.eql(2);\r",
+							"    pm.expect(responseJson.data.email).to.eql(\"janet.weaver@reqres.in\");\r",
+							"    pm.expect(responseJson.data.first_name).to.eql(\"Janet\");\r",
+							"    pm.expect(responseJson.data.last_name).to.eql(\"Weaver\");\r",
+							"});\r",
+							"\r",
+							"//Handling responses that don't parse\r",
+							"\r",
+							"pm.test(\"Body contains string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"janet.weaver@reqres.in\");\r",
+							"});\r",
+							"\r",
+							"//Status code being one of a set\r",
+							"pm.test(\"Successful status code\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"//Testing Headers\r",
+							"pm.test(\"Content-Type Header present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"//Testing Headers Value\r",
+							"pm.test(\"Content-Type value\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json; charset=utf-8\");\r",
+							"});\r",
+							"\r",
+							"//Testing Cookies\r",
+							"\r",
+							"pm.test(\"Cookies is present\", function () {\r",
+							"    pm.expect(pm.cookies.has(\"__cfduid\")).to.be.true;\r",
+							"});\r",
+							"//Testing Cookies Value\r",
+							"pm.test(\"Cookie value check\", function () {\r",
+							"    pm.expect(pm.cookies.get(\"__cfduid\")).to.eql(\"d05972e531e5eae42d09aed627e2ecb4d1600423677\");\r",
+							"});\r",
+							"\r",
+							"//Checking Response time\r",
+							"pm.test(\"Response time less than 80 ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(80);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/{{userid}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"{{userid}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Testing pre-request and post request scripting",
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"id": "78b9c814-11d9-4a04-8358-6e4d1ec49fe4",
+						"exec": [
+							"pm.globals.set(\"userid\", 2);"
+						],
+						"type": "text/javascript"
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"id": "45f3c631-0fcf-4332-ba8e-c91a615dbf83",
+						"exec": [
+							"//Status code validation\r",
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"//Multiple assertions\r",
+							"pm.test(\"Validate multiple fields in the response body\", function () {\r",
+							"    responseJson=pm.response.json();\r",
+							"    pm.expect(responseJson.data.id).to.eql(2);\r",
+							"    pm.expect(responseJson.data.email).to.eql(\"janet.weaver@reqres.in\");\r",
+							"    pm.expect(responseJson.data.first_name).to.eql(\"Janet\");\r",
+							"    pm.expect(responseJson.data.last_name).to.eql(\"Weaver\");\r",
+							"});\r",
+							"\r",
+							"//Handling responses that don't parse\r",
+							"\r",
+							"pm.test(\"Body contains string\", function () {\r",
+							"    pm.expect(pm.response.text()).to.include(\"janet.weaver@reqres.in\");\r",
+							"});\r",
+							"\r",
+							"//Status code being one of a set\r",
+							"pm.test(\"Successful status code\", function () {\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([200,201]);\r",
+							"});\r",
+							"\r",
+							"//Testing Headers\r",
+							"pm.test(\"Content-Type Header present\", function () {\r",
+							"    pm.response.to.have.header(\"Content-Type\");\r",
+							"});\r",
+							"//Testing Headers Value\r",
+							"pm.test(\"Content-Type value\", function () {\r",
+							"    pm.expect(pm.response.headers.get(\"Content-Type\")).to.eql(\"application/json; charset=utf-8\");\r",
+							"});\r",
+							"\r",
+							"//Testing Cookies\r",
+							"\r",
+							"pm.test(\"Cookies is present\", function () {\r",
+							"    pm.expect(pm.cookies.has(\"__cfduid\")).to.be.true;\r",
+							"});\r",
+							"//Testing Cookies Value\r",
+							"pm.test(\"Cookie value check\", function () {\r",
+							"    pm.expect(pm.cookies.get(\"__cfduid\")).to.eql(\"d05972e531e5eae42d09aed627e2ecb4d1600423677\");\r",
+							"});\r",
+							"\r",
+							"//Checking Response time\r",
+							"pm.test(\"Response time less than 80 ms\", function () {\r",
+							"    pm.expect(pm.response.responseTime).to.be.below(80);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://reqres.in/api/users/{{userid}}",
+					"protocol": "https",
+					"host": [
+						"reqres",
+						"in"
+					],
+					"path": [
+						"api",
+						"users",
+						"{{userid}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

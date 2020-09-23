@@ -1,0 +1,64 @@
+{
+	"info": {
+		"_postman_id": "e00f3d50-b39b-47ea-862d-6fd4b2b8bbfa",
+		"name": "DataDrivenTesting",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "CREATE multiple employee record",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"id": "7eb3957e-79f2-48b5-8ac1-b086ed42cf86",
+						"exec": [
+							"tests[\"Validating Status Code\"]=responseCode.code== 200;\r",
+							"\r",
+							"tests[\"Validating Status anywhere in the response body\"] = responseBody.has = \"success\"\r",
+							"\r",
+							"var response = JSON.parse(responseBody);\r",
+							"tests[\"Validating Status in the exact position\"] = response.status == \"success\"\r",
+							"\r",
+							"pm.test(\"Check Content-Type header\", function()\r",
+							"\r",
+							"{\r",
+							"    pm.response.to.be.header(\"Content-Type\",\"application/json\");\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"{{name}}\",\r\n    \"salary\":\"{{salary}}\",\r\n    \"age\":\"{{age}}\"\r\n    \r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://dummy.restapiexample.com/api/v1/create",
+					"protocol": "http",
+					"host": [
+						"dummy",
+						"restapiexample",
+						"com"
+					],
+					"path": [
+						"api",
+						"v1",
+						"create"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
